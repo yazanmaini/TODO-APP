@@ -74,7 +74,7 @@ ul.it li {
   background: #fff;
   position: relative;
   padding:10px 100px 10px 10px;
-  margin: 0 0 10px 0;
+  margin: 0 0 40px 0;
   border-radius: 5px;
   box-shadow: 0px 1px 2px rgba(44, 62, 18, 0.10);
   font-size: 14px;
@@ -142,15 +142,16 @@ ul.it li div.buttons button.completed svg .fill {
   fill: #000066;
 }
 ul.it li div.buttons button.completed:hover svg .fill {
-  fill: #009933;
+  fill: #2eb82e;
 }
 ul.it li div.buttons button.delete svg .fill {
   fill: #0000ff;
 }
+
 ul.it li div.buttons button.delete:hover svg .fill {
   fill: #ff2109;
 }
 
 ul#check li div.buttons button.completed svg .fill {
-  fill:#009933;
+  fill:#2eb82e;
 }
