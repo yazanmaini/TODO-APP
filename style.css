@@ -1,4 +1,8 @@
 @charset "UTF-8";
+body {
+  background: #edf0f1;
+  padding: 80px 0 0 0;
+}
 
 header {
   width: 100%;
@@ -32,24 +36,121 @@ header input{
   border-bottom-right-radius: 25px;
   box-shadow: none;
   outline: none;
-
-
 }
 
 header input :: -webkit-input-placeholder {
-  color: rgba(255,225, 225, 0.75);
+  color: rgba(255,225,225, 0.75);
 }
 
-button {
+header button {
   height: 50px;
   width: 50px;
   position: absolute;
   top: 15px;
-  right: 30px;
+  right: 15px;
   z-index: 2;
   border-radius: 25px;
   background: #fff;
   border: 0;
   box-shadow: none;
   outline: none;
+}
+ div .container {
+  width: 100%;
+  float: left;
+  padding: 15px;
+  margin: 0 0 10px 0;
+}
+
+ul.it {
+  width: 100%;
+  float: left;
+}
+
+ul.it li {
+  width: 100%;
+  height: 50px;
+  float: left;
+  background: #fff;
+  position: relative;
+  padding:10px 100px 10px 10px;
+  margin: 0 0 10px 0;
+  border-radius: 5px;
+  box-shadow: 0px 1px 2px rgba(44, 62, 18, 0.10);
+  font-size: 14px;
+  font-weight: 500;
+  color: #444;
+
+}
+
+ul .it li:last-of-type {
+  margin: 0;
+}
+
+ul .it li div.buttons {
+  width: 100px;
+  height: 50px;
+  float: right;
+  position: relative;
+  top: 0;
+  left: 120px;
+  padding-left: 10px;
+}
+
+ul.it li div.buttons button {
+  width: 50px;
+  height: 50px;
+  float: left;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: 0px;
+  box-shadow: none;
+  outline: none;
+  position: relative;
+  cursor: none;
+  cursor: pointer;
+  padding: 15px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+ul.it li div.buttons button:last-of-type:before {
+  content:'';
+  width:1px;
+  height:30px;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  background: #000066;
+}
+
+ul.it li div.buttons button svg {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -11px 0 0 -11px;
+}
+ul.it li div.buttons button svg .fill{
+  transition: fill 0.2s ease;
+}
+ul.it li div.buttons button.completed svg .fill {
+  fill: #000066;
+}
+ul.it li div.buttons button.completed:hover svg .fill {
+  fill: #009933;
+}
+ul.it li div.buttons button.delete svg .fill {
+  fill: #0000ff;
+}
+ul.it li div.buttons button.delete:hover svg .fill {
+  fill: #ff2109;
+}
+
+ul#check li div.buttons button.completed svg .fill {
+  fill:#009933;
 }
