@@ -6,10 +6,30 @@ var completeSVG = '<svg viewBox="0 0 20 20"> <path class="fill" d="M10.219,1.688
 // if user clicks on the add button
 document.getElementById('add').addEventListener('click', function() {
   var value = document.getElementById('item').value;
-  if  (value) addItem(value);
+  if (value) {
+     addItem(value);
+     value = document.getElementById('item').value = "";
+  }
 });
+// remove funtion which removes the item when clicked on the deleted SVG icon
+function remove() {
+  var item = this.parentNode.parentNode;
+  var parent = item.parentNode;
+  parent.removeChild(item);
+}
+// remove funtion which removes the item when clicked on the deleted SVG icon
+function complete() {
+  var item = this.parentNode.parentNode;
+  var parent = item.parentNode;
+  var parentID = parent.id;
 
+//it checks if the item is to be added to the completed unordered list or the 'it' list
+  var target = (parentID === 'it') ? document.getElementById('check') : document.getElementById('it');
+  parent.removeChild(item);
+  target.insertBefore(item, target.childNodes[0]);
+}
 
+// this function adds the text to the list when clicked on the add button
 function addItem(text) {
 
     var list = document.getElementById('it');
@@ -21,9 +41,16 @@ function addItem(text) {
 
     var deleted = document.createElement('button');
     deleted.classList.add('delete');
+
+    // adding a click event for the delete button to remove items from the classList
+    deleted.addEventListener('click', remove);
     deleted.innerHTML = deleteSVG;
+
     var completed = document.createElement('button');
     completed.classList.add('completed');
+
+    //adding a click event for the completed button to mark the events as completed
+    completed.addEventListener('click', complete);
     completed.innerHTML = completeSVG;
 
     buttons.appendChild(deleted);
