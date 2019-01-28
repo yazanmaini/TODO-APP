@@ -22,7 +22,7 @@ header input{
   height: 50px;
   width: 100%;
   float: left;
-  color: #fff;
+  color: #ffffff;
   padding: 0,0,60px,0;
   text-indent: 19px;
   font-size: 15px;
@@ -38,8 +38,9 @@ header input{
   outline: none;
 }
 
-header input :: -webkit-input-placeholder {
-  color: rgba(255,225,225, 0.75);
+header input::-webkit-input-placeholder { 
+  color: #fff;
+  opacity: 0.6;
 }
 
 header button {
@@ -59,7 +60,7 @@ header button {
   width: 100%;
   float: left;
   padding: 15px;
-  margin: 0 0 10px 0;
+  margin: 0 0 20px 0;
 }
 
 ul.it {
@@ -71,9 +72,11 @@ ul.it li {
   width: 100%;
   height: 50px;
   float: left;
+  right: 30px;
+  top: 20px;
   background: #fff;
   position: relative;
-  padding:10px 100px 10px 10px;
+  padding:15px 10px 15px 10px;
   margin: 0 0 40px 0;
   border-radius: 5px;
   box-shadow: 0px 1px 2px rgba(44, 62, 18, 0.10);
@@ -94,7 +97,7 @@ ul .it li div.buttons {
   position: relative;
   top: 0;
   left: 120px;
-  padding-left: 10px;
+  padding:5px 10px 10px 10px;
 }
 
 ul.it li div.buttons button {
@@ -133,16 +136,21 @@ ul.it li div.buttons button svg {
   position: absolute;
   top: 50%;
   left: 50%;
-  margin: -11px 0 0 -11px;
+  margin: -15px 0 0 -15px;
 }
 ul.it li div.buttons button svg .fill{
   transition: fill 0.2s ease;
 }
+
+ul.it li div.buttons button.completed svg {
+  transition: background 0.2s ease;
+}
+
 ul.it li div.buttons button.completed svg .fill {
   fill: #000066;
 }
 ul.it li div.buttons button.completed:hover svg .fill {
-  fill: #2eb82e;
+  fill: #009933;
 }
 ul.it li div.buttons button.delete svg .fill {
   fill: #0000ff;
@@ -153,5 +161,29 @@ ul.it li div.buttons button.delete:hover svg .fill {
 }
 
 ul#check li div.buttons button.completed svg .fill {
-  fill:#2eb82e;
+  fill:#00b33c;
+}
+
+div.container ul.it#check:not(:empty) {
+  position: relative;
+  opacity: 0.6;
+  padding: 60px 0 0 0;
+}
+
+div.container ul.it#check:not(:empty):before {
+
+  content:'';
+  width: 150px;
+  height: 1px;
+  background: #808080;
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  margin: 0 0 0 -75px;
+  opacity: 0.6;
+}
+div.container ul.it#check {
+  list-style: circle;
+  left: 40px;
+
 }
