@@ -10,5 +10,6 @@ Funtionalities:
 - App blurs the completed items.
 
 Screenshot:
+
 <img width="547" alt="screen shot 2019-01-27 at 5 26 14 pm" src="https://user-images.githubusercontent.com/44656583/51810214-54b49580-225b-11e9-93b2-be681c5e9c66.png">
 
